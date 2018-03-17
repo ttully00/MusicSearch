@@ -2,12 +2,12 @@
   <div class="itunes">
     <h1>Itunes</h1>
     <h2>Music and Video Streaming at its best!</h2>
-    <!-- <ol>
+<form v-on:submit.prevent="validateForm">
      <input type="text" id="myInput" placeholder="Search Favorite Artist.." title="Type in a name">
      <input type="checkbox" name="enter name here" value="enter value here">Audio
-          <input type="checkbox" name="enter name here" value="enter value here">Video  <input type="submit">
-
-    <ol> -->
+          <input type="checkbox" name="enter name here" value="enter value here">Video  
+ <p><input type="submit" value="Submit"></p>
+</form>
   </div>
 
 </template>
