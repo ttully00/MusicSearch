@@ -1,11 +1,12 @@
 <template>
-  <div class="itunes">
+ <div class="itunes">
     <h1>Itunes</h1>
     <h2>Music and Video Streaming at its best!</h2>
-<form v-on:submit.prevent="validateForm">
-     <input type="text" id="myInput" placeholder="Search Favorite Artist.." title="Type in a name">
+
+<form v-on:submit.prevent="findmusic">
+      <input type="text" id="myInput" placeholder="Search Favorite Artist.." title="Type in a name">
      <input type="checkbox" name="enter name here" value="enter value here">Audio
-          <input type="checkbox" name="enter name here" value="enter value here">Video  
+          <input type="checkbox" name="enter name here" value="enter value here">Video
  <p><input type="submit" value="Submit"></p>
 </form>
   </div>
@@ -14,22 +15,33 @@
 
 <script>
 import axios from 'axios';
+
 export default {
   name: 'Itunes Search',
   data () {
     return {
       results: null,
       errors: [],
-      videos: '',
-      audio: '',
+      entity: '',
+      atribute: '',
        msg: 'Itunes Search'
     }
   },
   methods: {
-    findWords: function() {
-      axios.get('https://itunes.apple.com/search?term=audio')
+    findmusic:function() {
+      axios.get('https://affiliate.itunes.apple.com/resources/documentation/itunes-storeweb-service-search-api/')
+           params: {
+           entity=all,
+           attribute=all
 
-      }
+  }
+    })
+      .then( response => {
+        this.results = response.data;
+      })
+      .catch( error => {
+         this.errors.push(error);
+      })
     }
   }
 </script>
