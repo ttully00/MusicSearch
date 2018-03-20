@@ -26,16 +26,16 @@ export default {
       atribute: '',
        msg: 'Itunes Search'
     }
-  },
-  methods: {
-    findmusic:function() {
-      axios.get('https://affiliate.itunes.apple.com/resources/documentation/itunes-storeweb-service-search-api/')
-           params: {
-           entity=all,
-           attribute=all
-
   }
-    })
+ }
+  methods: {
+    findmusic: function() {
+      axios.get('https://affiliate.itunes.apple.com/resources/documentation/itunes-storeweb-service-search-api/'
+           params: {
+           entity:
+           attribute:
+           }
+       })
       .then( response => {
         this.results = response.data;
       })
@@ -44,6 +44,7 @@ export default {
       })
     }
   }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
