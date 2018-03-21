@@ -9,47 +9,46 @@
           <input type="checkbox" name="enter name here" value="enter value here">Video
  <p><input type="submit" value="Submit"></p>
 </form>
+<p>{{results}}</p>
   </div>
 
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
-  name: 'Itunes Search',
-  data () {
+  name: "Itunes",
+  data() {
     return {
       results: null,
       errors: [],
-      entity: '',
-      atribute: '',
-       msg: 'Itunes Search'
-    }
-  }
- }
+      entity: "",
+      atribute: "",
+      msg: "Itunes Search"
+    };
+  },
   methods: {
     findmusic: function() {
-      axios.get('https://affiliate.itunes.apple.com/resources/documentation/itunes-storeweb-service-search-api/'
-           params: {
-           entity:
-           attribute:
-           }
-       })
-      .then( response => {
-        this.results = response.data;
-      })
-      .catch( error => {
-         this.errors.push(error);
-      })
+      axios
+        .get("https://itunes.apple.com/search?", {
+          params: { term: "jack johnson", limit: "25" }
+        })
+        .then(response => {
+          this.results = response.data;
+        })
+        .catch(error => {
+          this.errors.push(error);
+        });
     }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
