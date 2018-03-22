@@ -31,8 +31,8 @@ export default {
   methods: {
     findmusic: function() {
       axios
-        .get("https://itunes.apple.com/search?", {
-          params: { term: "jack johnson", limit: "25" }
+        .get("https://itunes.apple.com/search?term=R&B+HipHop&limit=25", {
+          params: { term: "R&B+HipHop", limit: "25" }
         })
         .then(response => {
           this.results = response.data;
