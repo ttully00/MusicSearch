@@ -1,13 +1,19 @@
 <template>
   <div id="app">
     <img src="./assets/ituneslogo.jpg">
+    <Itunes/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Itunes from './components/Itunes.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Itunes
+  }
 }
 </script>
 
