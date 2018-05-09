@@ -1,1 +1,42 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>wats4000project</title><link href=static/css/app.e770031ba29a8736d2721daa77bbffa3.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=static/js/manifest.37a2ecbb1d1b7e6c9ada.js></script><script type=text/javascript src=static/js/vendor.c397231b51d1afea579a.js></script><script type=text/javascript src=static/js/app.86ac9d35cdb065f17b7b.js></script></body></html>
+<head><link href=static/css/app.1c07e4abce0909742aa04ebb24f01ed4.css rel=stylesheet></head><template><div class=itunes><h1>Itunes</h1><h2>Music and Video Streaming at its best!</h2><form v-on:submit.prevent=findmusic><input type=text id=myInput placeholder="Search Favorite Artist.." title="Type in a name"> <input type=checkbox name="enter name here" value="enter value here">Audio <input type=checkbox name="enter name here" value="enter value here">Video<p><input type=submit value=Submit></p></form><p>{{results}}</p></div></template><script>import axios from "axios";
+ 
+ export default {
+   name: "Itunes",
+   data() {
+     return {
+       results: null,
+       errors: [],
+       entity: "",
+       atribute: "",
+       msg: "Itunes Search"
+     };
+   },
+   methods: {
+     findmusic: function() {
+       axios
+         .get("https://itunes.apple.com/search?term=R&B+HipHop&limit=25", {
+           params: { term: "R&B+HipHop", limit: "25" }
+         })
+         .then(response => {
+           this.results = response.data;
+         })
+         .catch(error => {
+           this.errors.push(error);
+         });
+     }
+   }
+ };</script><style scoped>h1,
+ h2 {
+   font-weight: normal;
+ }
+ ul {
+   list-style-type: none;
+   padding: 0;
+ }
+ li {
+   display: inline-block;
+   margin: 0 10px;
+ }
+ a {
+   color: #010a06;
+ }</style><script type=text/javascript src=static/js/manifest.37a2ecbb1d1b7e6c9ada.js></script><script type=text/javascript src=static/js/vendor.c397231b51d1afea579a.js></script><script type=text/javascript src=static/js/app.6be7403bc45133539e61.js></script>
