@@ -9,6 +9,8 @@
 <script>
 import Itunes from './components/Itunes.vue'
 
+import axios from 'axios';
+
 export default {
   name: 'App',
   components: {
