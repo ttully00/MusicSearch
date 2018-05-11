@@ -1,6 +1,8 @@
 <template>
   <div id="app">
+     
     <img src="./assets/ituneslogo.jpg">
+     
     <Itunes/>
     <router-view/>
   </div>
