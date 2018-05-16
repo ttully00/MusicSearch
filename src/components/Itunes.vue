@@ -6,8 +6,7 @@
 
 <form v-on:submit.prevent="findmusic">
       <input type="text" id="myInput" placeholder="Search Favorite Artist.." title="Type in a name">
-     <input type="checkbox" name="enter name here" value="enter value here">Audio
-          <input type="checkbox" name="enter name here" value="enter value here">Video
+
  <p><input type="submit" value="Submit"></p>
 </form>
 <p>{{results}}</p>
