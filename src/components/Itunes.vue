@@ -1,8 +1,8 @@
 <template>
  <div class="itunes">
 <h1>{{ msg }}</h1>
-    <h1>Itunes</h1>
-    <h2>Music and Video Streaming at its best!</h2>
+    <h1></h1>
+    <h2></h2>
 
 <form v-on:submit.prevent="findmusic">
       <input type="text" id="myInput" placeholder="Search Favorite Artist.." title="Type in a name">
