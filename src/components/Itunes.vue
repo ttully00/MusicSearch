@@ -1,16 +1,20 @@
 <template>
  <div class="itunes">
-<h1>{{ msg }}</h1>
-    <h1></h1>
-    <h2></h2>
+<div class="row" id="search_artist">
+                <div class="wrapper">
+                    <h1>Itunes Search</h1>
 
-<form v-on:submit.prevent="findmusic">
-      <input type="text" id="myInput" placeholder="Search Favorite Artist.." title="Type in a name">
-
- <p><input type="submit" value="Submit"></p>
-</form>
-<p>{{results}}</p>
+<form id="form">
+        <input type="text" placeholder="Search artist name" id="input_search" />
+      </form>
+    </div>
   </div>
+
+<div class="row" id="album_list_container">
+
+  </div>
+   </div>
+
 
 </template>
 
@@ -62,4 +66,5 @@ li {
 a {
   color: #010a06;
 }
+
 </style>
