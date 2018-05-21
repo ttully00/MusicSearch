@@ -1,22 +1,22 @@
 <template>
  <div class="itunes">
-<div class="row" id="search_artist">
-                <div class="wrapper">
-                    <h1>Itunes Search</h1>
+<h1>{{ msg }}</h1>
+    <h1></h1>
+    <h2></h2>
 
-<form id="form">
-        <input type="text" placeholder="Search artist name" id="input_search" />
-      </form>
-    </div>
+<form v-on:submit.prevent="findmusic">
+      <input type="text" id="myInput" placeholder="Search Favorite Artist.." title="Type in a name">
+
+ <p><input type="submit" value="Submit"></p>
+</form>
+<p>{{results}}</p>
   </div>
-
-<div class="row" id="album_list_container">
-
-  </div>
-    </div>
-
 
 </template>
+
+
+
+
 
 <script>
 
