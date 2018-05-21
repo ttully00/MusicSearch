@@ -1,4 +1,5 @@
-<template>
+<template>		
+
  <div class="itunes">
 <h1>{{ msg }}</h1>
     <h1></h1>
@@ -9,6 +10,7 @@
 
  <p><input type="submit" value="Submit"></p>
 </form>
+
 <p>{{results}}</p>
   </div>
 
@@ -16,6 +18,9 @@
 
 
 
+
+	</div>
+</template>
 
 
 <script>
