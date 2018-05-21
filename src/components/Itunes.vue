@@ -13,7 +13,7 @@
 <div class="row" id="album_list_container">
 
   </div>
-   </div>
+    </div>
 
 
 </template>
