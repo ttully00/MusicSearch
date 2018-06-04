@@ -1,0 +1,41 @@
+{
+    "resultCount": 25,
+    "results": [{
+            "wrapperType": "track",
+            "kind": "song",
+            "artistId": 309447983,
+            "collectionId": 309715990,
+            "trackId": 309716004,
+            "artistName": "All",
+            "collectionName": "R&B - Hip-Hop",
+            "trackName": "Come On",
+            "collectionCensoredName": "R&B - Hip-Hop",
+            "trackCensoredName": "Come On",
+            "artistViewUrl": "https://itunes.apple.com/us/artist/maria-casulli/309447983?uo=4",
+            "collectionViewUrl": "https://itunes.apple.com/us/album/come-on/309715990?i=309716004&uo=4",
+            "trackViewUrl": "https://itunes.apple.com/us/album/come-on/309715990?i=309716004&uo=4",
+            "previewUrl": "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music/d8/65/b2/mzm.cjxeedoh.aac.p.m4a",
+            "artworkUrl30": "https://is2-ssl/.mzstatic.com/image/thumb/Music/v4/d4/53/23/d4532349-1fd6-9781-72bc-afc24d1ccaba/source/30x30bb.jpg",
+            "artworkUrl60": "https://is2-ssl/.mzstatic.com/image/thumb/Music/v4/d4/53/23/d4532349-1fd6-9781-72bc-afc24d1ccaba/source/60x60bb.jpg",
+            "artworkUrl100": "https://is2-ssl/.mzstatic.com/image/thumb/Music/v4/d4/53/23/d4532349-1fd6-9781-72bc-afc24d1ccaba/source/100x100bb.jpg",
+            "collectionPrice": 10.99,
+            "trackPrice": 1.29,
+            "releaseDate": "2009-04-17T07:00:00Z",
+            "collectionExplicitness": "notExplicit",
+            "trackExplicitness": "notExplicit",
+            "discCount": 1,
+            "discNumber": 1,
+            "trackCount": 10,
+            "trackNumber": 5,
+            "trackTimeMillis": 117387,
+            "country": "USA",
+            "currency": "USD",
+            "primaryGenreName": "R&B/Soul",
+            "isStreamable": true
+        }, {
+            "wrapperType": "track",
+            "kind": "song",
+            "artistName": "All"
+        }
+    
+

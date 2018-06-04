@@ -3,6 +3,7 @@
  <div class="itunes">
 <h1>{{ msg }}</h1>
     <h1></h1>
+
     <h2></h2>
 
 <form v-on:submit.prevent="findmusic">
@@ -11,10 +12,16 @@
  <p><input type="submit" value="Submit"></p>
 </form>
 
-<p>{{results}}</p>
-  </div>
 
-</template>
+<p>{{results}}</p>
+
+<ul id="results">
+  <li v-for="results in results">
+    {{ All }}
+  </li>
+</ul>
+
+
 
 
 
@@ -49,8 +56,17 @@ export default {
         .catch(error => {
           this.errors.push(error);
         });
-    }
+    },
+    var results = new Vue({
+  el: '#results',
+  data: {
+    items: [
+      { message: 'artistName' },
+      { message: 'artworkUrl30' }
+    ]
   }
+})
+
 };
 </script>
 
