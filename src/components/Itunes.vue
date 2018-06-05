@@ -1,4 +1,4 @@
-<template>		
+<template>        
 
  <div class="itunes">
 <h1>{{ msg }}</h1>
@@ -13,11 +13,12 @@
 </form>
 
 
-<p>{{results}}</p>
+<!-- <p>{{results}}</p> -->
 
 <ul id="results">
-  <li v-for="results in results">
-    {{ All }}
+  <li v-for="result in results">
+   <span>{{ result.trackName }}</span>
+
   </li>
 </ul>
 
@@ -26,13 +27,12 @@
 
 
 
-	</div>
+    </div>
 </template>
 
 
 <script>
-
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   name: "Itunes",
@@ -47,26 +47,27 @@ export default {
   },
   methods: {
     findmusic: function() {
-      axios.get("https://itunes.apple.com/search?term=R&B+HipHop&limit=25", {
+      axios
+        .get("https://itunes.apple.com/search?term=R&B+HipHop&limit=25", {
           params: { term: "R&B+HipHop", limit: "25" }
         })
         .then(response => {
-          this.results = response.data;
+          this.results = response.data.results;
         })
         .catch(error => {
           this.errors.push(error);
         });
-    },
-    var results = new Vue({
-  el: '#results',
-  data: {
-    items: [
-      { message: 'artistName' },
-      { message: 'artworkUrl30' }
-    ]
+    }
+    //     var results = new Vue({
+    //   el: '#results',
+    //   data: {
+    //     items: [
+    //       { message: 'artistName' },
+    //       { message: 'artworkUrl30' }
+    //     ]
+    //   }
+    // })
   }
-})
-
 };
 </script>
 
@@ -81,11 +82,11 @@ ul {
   padding: 0;
 }
 li {
-  display: inline-block;
+  display: block;
   margin: 0 10px;
 }
 a {
   color: #010a06;
 }
-
 </style>
+
