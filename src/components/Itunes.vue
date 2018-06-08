@@ -17,7 +17,7 @@
 
 <ul id="results">
   <li v-for="result in results">
-   <span>{{ result.trackName }}</span>
+   <span>{{ result.artistViewUrl }}</span>
 
   </li>
 </ul>
@@ -58,15 +58,7 @@ export default {
           this.errors.push(error);
         });
     }
-    //     var results = new Vue({
-    //   el: '#results',
-    //   data: {
-    //     items: [
-    //       { message: 'artistName' },
-    //       { message: 'artworkUrl30' }
-    //     ]
-    //   }
-    // })
+  
   }
 };
 </script>
