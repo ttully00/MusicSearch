@@ -1,39 +1,23 @@
 <template>        
-
  <div class="itunes">
 <h1>{{ msg }}</h1>
     <h1></h1>
-
     <h2></h2>
-
 <form v-on:submit.prevent="findmusic">
-      <input type="text" id="myInput" placeholder="Search Favorite Artist.." title="Type in a name">
-
+      <input type="text" id="myInput" v-model="artist" placeholder="Search Favorite Artist.." title="Type in a name">
  <p><input type="submit" value="Submit"></p>
 </form>
-
-
 <!-- <p>{{results}}</p> -->
-
 <ul id="results">
   <li v-for="result in results">
-   <span>{{ result.artistViewUrl }}</span>
-
+    <span><a v-bind:href="result.trackViewUrl">{{result.trackCensoredName}}</a></span>
+   <span><a v-bind:href="result.artistViewUrl">{{ result.artistName }}</a></span>
   </li>
 </ul>
-
-
-
-
-
-
     </div>
 </template>
-
-
 <script>
 import axios from "axios";
-
 export default {
   name: "Itunes",
   data() {
@@ -42,14 +26,15 @@ export default {
       errors: [],
       entity: "",
       atribute: "",
+      artist: "",
       msg: "Itunes Search"
     };
   },
   methods: {
     findmusic: function() {
       axios
-        .get("https://itunes.apple.com/search?term=R&B+HipHop&limit=25", {
-          params: { term: "R&B+HipHop", limit: "25" }
+        .get("https://itunes.apple.com/search", {
+          params: { term: this.artist, limit: "25" }
         })
         .then(response => {
           this.results = response.data.results;
@@ -62,7 +47,6 @@ export default {
   }
 };
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1,
@@ -81,4 +65,3 @@ a {
   color: #010a06;
 }
 </style>
-
