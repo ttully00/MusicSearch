@@ -9,9 +9,10 @@
 </form>
 <!-- <p>{{results}}</p> -->
 <ul id="results">
-  <li v-for="result in results">
-    <span><a v-bind:href="result.trackViewUrl">{{result.trackCensoredName}}</a></span>
-   <span><a v-bind:href="result.artistViewUrl">{{ result.artistName }}</a></span>
+  <li v-bind="result in results">
+    <span><a v-bind:href="result.artworkUrl30">{{result.trackCensoredName}}</a></span>
+   <span><a v-bind:href="result.artistName">{{ result.artistName }}</a></span>
+   <span><a v-bind:href="result.releaseDate">{{ result.country }}</a></span>
   </li>
 </ul>
     </div>

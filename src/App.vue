@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-     
+    <div>
+   <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+</nav>
     <img src="./assets/ituneslogo.jpg">
      
     <Itunes/>
